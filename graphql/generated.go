@@ -442,7 +442,7 @@ func (ec *executionContext) field_Mutation_createAccount_argsAccount(
 
 	ctx = graphql.WithPathContext(ctx, graphql.NewPathWithField("account"))
 	if tmp, ok := rawArgs["account"]; ok {
-		return ec.unmarshalNAccountInput2githubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐAccountInput(ctx, tmp)
+		return ec.unmarshalNAccountInput2githubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐAccountInput(ctx, tmp)
 	}
 
 	var zeroVal AccountInput
@@ -470,7 +470,7 @@ func (ec *executionContext) field_Mutation_createOrder_argsOrder(
 
 	ctx = graphql.WithPathContext(ctx, graphql.NewPathWithField("order"))
 	if tmp, ok := rawArgs["order"]; ok {
-		return ec.unmarshalNOrderInput2githubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderInput(ctx, tmp)
+		return ec.unmarshalNOrderInput2githubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderInput(ctx, tmp)
 	}
 
 	var zeroVal OrderInput
@@ -498,7 +498,7 @@ func (ec *executionContext) field_Mutation_createProduct_argsProduct(
 
 	ctx = graphql.WithPathContext(ctx, graphql.NewPathWithField("product"))
 	if tmp, ok := rawArgs["product"]; ok {
-		return ec.unmarshalNProductInput2githubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐProductInput(ctx, tmp)
+		return ec.unmarshalNProductInput2githubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐProductInput(ctx, tmp)
 	}
 
 	var zeroVal ProductInput
@@ -559,7 +559,7 @@ func (ec *executionContext) field_Query_accounts_argsPagination(
 
 	ctx = graphql.WithPathContext(ctx, graphql.NewPathWithField("pagination"))
 	if tmp, ok := rawArgs["pagination"]; ok {
-		return ec.unmarshalOPaginationInput2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐPaginationInput(ctx, tmp)
+		return ec.unmarshalOPaginationInput2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐPaginationInput(ctx, tmp)
 	}
 
 	var zeroVal *PaginationInput
@@ -615,7 +615,7 @@ func (ec *executionContext) field_Query_products_argsPagination(
 
 	ctx = graphql.WithPathContext(ctx, graphql.NewPathWithField("pagination"))
 	if tmp, ok := rawArgs["pagination"]; ok {
-		return ec.unmarshalOPaginationInput2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐPaginationInput(ctx, tmp)
+		return ec.unmarshalOPaginationInput2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐPaginationInput(ctx, tmp)
 	}
 
 	var zeroVal *PaginationInput
@@ -894,7 +894,7 @@ func (ec *executionContext) _Account_orders(ctx context.Context, field graphql.C
 	}
 	res := resTmp.([]*Order)
 	fc.Result = res
-	return ec.marshalNOrder2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderᚄ(ctx, field.Selections, res)
+	return ec.marshalNOrder2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Account_orders(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -945,7 +945,7 @@ func (ec *executionContext) _Mutation_createAccount(ctx context.Context, field g
 	}
 	res := resTmp.(*Account)
 	fc.Result = res
-	return ec.marshalOAccount2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐAccount(ctx, field.Selections, res)
+	return ec.marshalOAccount2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐAccount(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createAccount(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1005,7 +1005,7 @@ func (ec *executionContext) _Mutation_createProduct(ctx context.Context, field g
 	}
 	res := resTmp.(*Product)
 	fc.Result = res
-	return ec.marshalOProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐProduct(ctx, field.Selections, res)
+	return ec.marshalOProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐProduct(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createProduct(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1067,7 +1067,7 @@ func (ec *executionContext) _Mutation_createOrder(ctx context.Context, field gra
 	}
 	res := resTmp.(*Order)
 	fc.Result = res
-	return ec.marshalOOrder2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrder(ctx, field.Selections, res)
+	return ec.marshalOOrder2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrder(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createOrder(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1264,7 +1264,7 @@ func (ec *executionContext) _Order_products(ctx context.Context, field graphql.C
 	}
 	res := resTmp.([]*OrderedProduct)
 	fc.Result = res
-	return ec.marshalNOrderedProduct2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderedProductᚄ(ctx, field.Selections, res)
+	return ec.marshalNOrderedProduct2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderedProductᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Order_products(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1716,7 +1716,7 @@ func (ec *executionContext) _Query_accounts(ctx context.Context, field graphql.C
 	}
 	res := resTmp.([]*Account)
 	fc.Result = res
-	return ec.marshalNAccount2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐAccountᚄ(ctx, field.Selections, res)
+	return ec.marshalNAccount2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐAccountᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_accounts(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1779,7 +1779,7 @@ func (ec *executionContext) _Query_products(ctx context.Context, field graphql.C
 	}
 	res := resTmp.([]*Product)
 	fc.Result = res
-	return ec.marshalNProduct2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐProductᚄ(ctx, field.Selections, res)
+	return ec.marshalNProduct2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐProductᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_products(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -3948,7 +3948,7 @@ func (ec *executionContext) unmarshalInputOrderInput(ctx context.Context, obj an
 			it.AccountID = data
 		case "products":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("products"))
-			data, err := ec.unmarshalNOrderProductInput2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderProductInputᚄ(ctx, v)
+			data, err := ec.unmarshalNOrderProductInput2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderProductInputᚄ(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -4806,7 +4806,7 @@ func (ec *executionContext) ___Type(ctx context.Context, sel ast.SelectionSet, o
 
 // region    ***************************** type.gotpl *****************************
 
-func (ec *executionContext) marshalNAccount2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐAccountᚄ(ctx context.Context, sel ast.SelectionSet, v []*Account) graphql.Marshaler {
+func (ec *executionContext) marshalNAccount2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐAccountᚄ(ctx context.Context, sel ast.SelectionSet, v []*Account) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -4830,7 +4830,7 @@ func (ec *executionContext) marshalNAccount2ᚕᚖgithubᚗcomᚋPrajwalG1212199
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNAccount2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐAccount(ctx, sel, v[i])
+			ret[i] = ec.marshalNAccount2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐAccount(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -4850,7 +4850,7 @@ func (ec *executionContext) marshalNAccount2ᚕᚖgithubᚗcomᚋPrajwalG1212199
 	return ret
 }
 
-func (ec *executionContext) marshalNAccount2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐAccount(ctx context.Context, sel ast.SelectionSet, v *Account) graphql.Marshaler {
+func (ec *executionContext) marshalNAccount2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐAccount(ctx context.Context, sel ast.SelectionSet, v *Account) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -4860,7 +4860,7 @@ func (ec *executionContext) marshalNAccount2ᚖgithubᚗcomᚋPrajwalG12121998�
 	return ec._Account(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNAccountInput2githubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐAccountInput(ctx context.Context, v any) (AccountInput, error) {
+func (ec *executionContext) unmarshalNAccountInput2githubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐAccountInput(ctx context.Context, v any) (AccountInput, error) {
 	res, err := ec.unmarshalInputAccountInput(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
@@ -4913,7 +4913,7 @@ func (ec *executionContext) marshalNInt2int(ctx context.Context, sel ast.Selecti
 	return res
 }
 
-func (ec *executionContext) marshalNOrder2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderᚄ(ctx context.Context, sel ast.SelectionSet, v []*Order) graphql.Marshaler {
+func (ec *executionContext) marshalNOrder2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderᚄ(ctx context.Context, sel ast.SelectionSet, v []*Order) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -4937,7 +4937,7 @@ func (ec *executionContext) marshalNOrder2ᚕᚖgithubᚗcomᚋPrajwalG12121998�
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNOrder2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrder(ctx, sel, v[i])
+			ret[i] = ec.marshalNOrder2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrder(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -4957,7 +4957,7 @@ func (ec *executionContext) marshalNOrder2ᚕᚖgithubᚗcomᚋPrajwalG12121998�
 	return ret
 }
 
-func (ec *executionContext) marshalNOrder2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrder(ctx context.Context, sel ast.SelectionSet, v *Order) graphql.Marshaler {
+func (ec *executionContext) marshalNOrder2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrder(ctx context.Context, sel ast.SelectionSet, v *Order) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -4967,19 +4967,19 @@ func (ec *executionContext) marshalNOrder2ᚖgithubᚗcomᚋPrajwalG12121998ᚋg
 	return ec._Order(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNOrderInput2githubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderInput(ctx context.Context, v any) (OrderInput, error) {
+func (ec *executionContext) unmarshalNOrderInput2githubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderInput(ctx context.Context, v any) (OrderInput, error) {
 	res, err := ec.unmarshalInputOrderInput(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalNOrderProductInput2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderProductInputᚄ(ctx context.Context, v any) ([]*OrderProductInput, error) {
+func (ec *executionContext) unmarshalNOrderProductInput2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderProductInputᚄ(ctx context.Context, v any) ([]*OrderProductInput, error) {
 	var vSlice []any
 	vSlice = graphql.CoerceList(v)
 	var err error
 	res := make([]*OrderProductInput, len(vSlice))
 	for i := range vSlice {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
-		res[i], err = ec.unmarshalNOrderProductInput2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderProductInput(ctx, vSlice[i])
+		res[i], err = ec.unmarshalNOrderProductInput2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderProductInput(ctx, vSlice[i])
 		if err != nil {
 			return nil, err
 		}
@@ -4987,12 +4987,12 @@ func (ec *executionContext) unmarshalNOrderProductInput2ᚕᚖgithubᚗcomᚋPra
 	return res, nil
 }
 
-func (ec *executionContext) unmarshalNOrderProductInput2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderProductInput(ctx context.Context, v any) (*OrderProductInput, error) {
+func (ec *executionContext) unmarshalNOrderProductInput2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderProductInput(ctx context.Context, v any) (*OrderProductInput, error) {
 	res, err := ec.unmarshalInputOrderProductInput(ctx, v)
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNOrderedProduct2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderedProductᚄ(ctx context.Context, sel ast.SelectionSet, v []*OrderedProduct) graphql.Marshaler {
+func (ec *executionContext) marshalNOrderedProduct2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderedProductᚄ(ctx context.Context, sel ast.SelectionSet, v []*OrderedProduct) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -5016,7 +5016,7 @@ func (ec *executionContext) marshalNOrderedProduct2ᚕᚖgithubᚗcomᚋPrajwalG
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNOrderedProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderedProduct(ctx, sel, v[i])
+			ret[i] = ec.marshalNOrderedProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderedProduct(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5036,7 +5036,7 @@ func (ec *executionContext) marshalNOrderedProduct2ᚕᚖgithubᚗcomᚋPrajwalG
 	return ret
 }
 
-func (ec *executionContext) marshalNOrderedProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrderedProduct(ctx context.Context, sel ast.SelectionSet, v *OrderedProduct) graphql.Marshaler {
+func (ec *executionContext) marshalNOrderedProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrderedProduct(ctx context.Context, sel ast.SelectionSet, v *OrderedProduct) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -5046,7 +5046,7 @@ func (ec *executionContext) marshalNOrderedProduct2ᚖgithubᚗcomᚋPrajwalG121
 	return ec._OrderedProduct(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNProduct2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐProductᚄ(ctx context.Context, sel ast.SelectionSet, v []*Product) graphql.Marshaler {
+func (ec *executionContext) marshalNProduct2ᚕᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐProductᚄ(ctx context.Context, sel ast.SelectionSet, v []*Product) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -5070,7 +5070,7 @@ func (ec *executionContext) marshalNProduct2ᚕᚖgithubᚗcomᚋPrajwalG1212199
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐProduct(ctx, sel, v[i])
+			ret[i] = ec.marshalNProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐProduct(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5090,7 +5090,7 @@ func (ec *executionContext) marshalNProduct2ᚕᚖgithubᚗcomᚋPrajwalG1212199
 	return ret
 }
 
-func (ec *executionContext) marshalNProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
+func (ec *executionContext) marshalNProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -5100,7 +5100,7 @@ func (ec *executionContext) marshalNProduct2ᚖgithubᚗcomᚋPrajwalG12121998�
 	return ec._Product(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNProductInput2githubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐProductInput(ctx context.Context, v any) (ProductInput, error) {
+func (ec *executionContext) unmarshalNProductInput2githubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐProductInput(ctx context.Context, v any) (ProductInput, error) {
 	res, err := ec.unmarshalInputProductInput(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
@@ -5390,7 +5390,7 @@ func (ec *executionContext) marshalN__TypeKind2string(ctx context.Context, sel a
 	return res
 }
 
-func (ec *executionContext) marshalOAccount2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐAccount(ctx context.Context, sel ast.SelectionSet, v *Account) graphql.Marshaler {
+func (ec *executionContext) marshalOAccount2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐAccount(ctx context.Context, sel ast.SelectionSet, v *Account) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -5445,14 +5445,14 @@ func (ec *executionContext) marshalOInt2ᚖint(ctx context.Context, sel ast.Sele
 	return res
 }
 
-func (ec *executionContext) marshalOOrder2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐOrder(ctx context.Context, sel ast.SelectionSet, v *Order) graphql.Marshaler {
+func (ec *executionContext) marshalOOrder2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐOrder(ctx context.Context, sel ast.SelectionSet, v *Order) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return ec._Order(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalOPaginationInput2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐPaginationInput(ctx context.Context, v any) (*PaginationInput, error) {
+func (ec *executionContext) unmarshalOPaginationInput2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐPaginationInput(ctx context.Context, v any) (*PaginationInput, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5460,7 +5460,7 @@ func (ec *executionContext) unmarshalOPaginationInput2ᚖgithubᚗcomᚋPrajwalG
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalOProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋgo_microservice_projectᚋgraphqlᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
+func (ec *executionContext) marshalOProduct2ᚖgithubᚗcomᚋPrajwalG12121998ᚋEᚑcommerceᚑmicroserviceᚑapplicationᚑusingᚑGolangᚋgraphqlᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
