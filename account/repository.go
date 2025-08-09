@@ -11,7 +11,7 @@ type Repository interface {
 	Close() error
 	GetAccountByID(ctx context.Context, id string) (*Account, error)
 	PutAccount(ctx context.Context, account *Account) error
-	ListAccounts(ctx context.Context, skip uint64, take uint64) ([]*Account, error)
+	ListAccounts(ctx context.Context, skip uint64, take uint64) ([]Account, error)
 }
 
 type postgresRepository struct {
@@ -29,7 +29,7 @@ func NewPostgresRepository(url string) (Repository, error) {
 		return nil, err
 	}
 
-	return &postgresRepository{db: db}, nil
+	return &postgresRepository{db}, nil
 }
 
 func (r *postgresRepository) Close() error {
@@ -66,28 +66,27 @@ func (r *postgresRepository) PutAccount(ctx context.Context, account *Account) e
 	return err
 }
 
-func (r *postgresRepository) ListAccounts(ctx context.Context, skip uint64, take uint64) ([]*Account, error) {
-	query := `
-		SELECT id, name
-		FROM accounts
-		ORDER BY id
-		LIMIT $1 OFFSET $2`
-
-	rows, err := r.db.QueryContext(ctx, query, take, skip)
+func (r *postgresRepository) ListAccounts(ctx context.Context, skip uint64, take uint64) ([]Account, error) {
+	rows, err := r.db.QueryContext(
+		ctx,
+		"SELECT id, name FROM accounts ORDER BY id DESC OFFSET $1 LIMIT $2",
+		skip,
+		take,
+	)
 	if err != nil {
 		return nil, err
 	}
 	defer rows.Close()
 
-	var accounts []*Account
+	accounts := []Account{}
 	for rows.Next() {
-		var account Account
-		err := rows.Scan(&account.ID, &account.Name)
-		if err != nil {
-			return nil, err
+		a := &Account{}
+		if err = rows.Scan(&a.ID, &a.Name); err == nil {
+			accounts = append(accounts, *a)
 		}
-		accounts = append(accounts, &account)
 	}
-
+	if err = rows.Err(); err != nil {
+		return nil, err
+	}
 	return accounts, nil
 }

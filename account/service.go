@@ -37,7 +37,7 @@ func (s *accountService) PostAccount(ctx context.Context, name string) (*Account
 }
 
 func (s *accountService) GetAccount(ctx context.Context, id string) (*Account, error) {
-	return s.repository.getAccountbyID(ctx, id)
+	return s.repository.GetAccountByID(ctx, id)
 
 }
 
