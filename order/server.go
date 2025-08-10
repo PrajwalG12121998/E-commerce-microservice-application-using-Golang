@@ -106,7 +106,7 @@ func (s *grpcServer) PostOrder(ctx context.Context, r *pb.PostOrderRequest) (*pb
 		TotalPrice: order.TotalPrice,
 		Products:   []*pb.Order_OrderProduct{},
 	}
-	orderProto.CreatedAt, _ = order.createdAt.MarshalBinary()
+	orderProto.CreatedAt, _ = order.CreatedAt.MarshalBinary()
 	for _, p := range order.Products {
 		orderProto.Products = append(orderProto.Products, &pb.Order_OrderProduct{
 			Id:          p.ID,
@@ -156,12 +156,14 @@ func (s *grpcServer) GetOrdersForAccount(ctx context.Context, r *pb.GetOrdersFor
 			TotalPrice: o.TotalPrice,
 			Products:   []*pb.Order_OrderProduct{},
 		}
-		op.CreatedAt, _ = o.createdAt.MarshalBinary()
+		op.CreatedAt, _ = o.CreatedAt.MarshalBinary()
 
 		// Decorate orders with products
 		for _, product := range o.Products {
 			// Populate product fields
 			for _, p := range products {
+				log.Println("Printing product details inside server.go in order microservice")
+				log.Println(p.ID, p.Name, p.Description, p.Price)
 				if p.ID == product.ID {
 					product.Name = p.Name
 					product.Description = p.Description

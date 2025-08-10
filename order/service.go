@@ -14,7 +14,7 @@ type Service interface {
 
 type Order struct {
 	ID         string
-	createdAt  time.Time
+	CreatedAt  time.Time
 	TotalPrice float64
 	AccountID  string
 	Products   []OrderedProduct
@@ -43,7 +43,7 @@ func (s orderService) PostOrder(
 ) (*Order, error) {
 	o := &Order{
 		ID:        ksuid.New().String(),
-		createdAt: time.Now().UTC(),
+		CreatedAt: time.Now().UTC(),
 		AccountID: accountID,
 		Products:  products,
 	}

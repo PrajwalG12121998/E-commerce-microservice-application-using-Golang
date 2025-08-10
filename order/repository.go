@@ -53,7 +53,7 @@ func (r *postgresRepository) PutOrder(ctx context.Context, o Order) (err error) 
 		ctx,
 		"INSERT INTO orders(id, created_at, account_id, total_price) VALUES($1, $2, $3, $4)",
 		o.ID,
-		o.createdAt,
+		o.CreatedAt,
 		o.AccountID,
 		o.TotalPrice,
 	)
@@ -108,7 +108,7 @@ func (r *postgresRepository) GetOrdersForAccount(ctx context.Context, accountID 
 	for rows.Next() {
 		if err = rows.Scan(
 			&order.ID,
-			&order.createdAt,
+			&order.CreatedAt,
 			&order.AccountID,
 			&order.TotalPrice,
 			&orderedProduct.ID,
@@ -121,7 +121,7 @@ func (r *postgresRepository) GetOrdersForAccount(ctx context.Context, accountID 
 			newOrder := Order{
 				ID:         lastOrder.ID,
 				AccountID:  lastOrder.AccountID,
-				createdAt:  lastOrder.createdAt,
+				CreatedAt:  lastOrder.CreatedAt,
 				TotalPrice: lastOrder.TotalPrice,
 				Products:   products,
 			}
@@ -142,7 +142,7 @@ func (r *postgresRepository) GetOrdersForAccount(ctx context.Context, accountID 
 		newOrder := Order{
 			ID:         lastOrder.ID,
 			AccountID:  lastOrder.AccountID,
-			createdAt:  lastOrder.createdAt,
+			CreatedAt:  lastOrder.CreatedAt,
 			TotalPrice: lastOrder.TotalPrice,
 			Products:   products,
 		}

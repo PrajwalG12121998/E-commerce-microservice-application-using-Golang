@@ -56,7 +56,7 @@ func (c *Client) PostOrder(ctx context.Context, accountID string, products []Ord
 	newOrderCreatedAt.UnmarshalBinary(newOrder.CreatedAt)
 	return &Order{
 		ID:         newOrder.Id,
-		createdAt:  newOrderCreatedAt,
+		CreatedAt:  newOrderCreatedAt,
 		TotalPrice: newOrder.TotalPrice,
 		AccountID:  newOrder.AccountId,
 		Products:   products,
@@ -64,10 +64,13 @@ func (c *Client) PostOrder(ctx context.Context, accountID string, products []Ord
 }
 
 func (c *Client) GetOrdersForAccount(ctx context.Context, accountID string) ([]Order, error) {
+	log.Println("Inside client.go in Order microservice")
+
 	r, err := c.service.GetOrdersForAccount(ctx, &pb.GetOrdersForAccountRequest{
 		AccountId: accountID,
 	})
-
+	log.Println("printing the response from the server")
+	log.Println(r)
 	if err != nil {
 		log.Println(err)
 		return nil, err
@@ -79,12 +82,13 @@ func (c *Client) GetOrdersForAccount(ctx context.Context, accountID string) ([]O
 			TotalPrice: orderProto.TotalPrice,
 			AccountID:  orderProto.AccountId,
 		}
-		newOrder.createdAt = time.Time{}
-		newOrder.createdAt.UnmarshalBinary(orderProto.CreatedAt)
+		newOrder.CreatedAt = time.Time{}
+		newOrder.CreatedAt.UnmarshalBinary(orderProto.CreatedAt)
 		products := []OrderedProduct{}
-		for _, p := range newOrder.Products {
+		for _, p := range orderProto.Products {
+			log.Println(newOrder.Products)
 			products = append(products, OrderedProduct{
-				ID:          p.ID,
+				ID:          p.Id,
 				Quantity:    p.Quantity,
 				Name:        p.Name,
 				Description: p.Description,
@@ -94,5 +98,7 @@ func (c *Client) GetOrdersForAccount(ctx context.Context, accountID string) ([]O
 		newOrder.Products = products
 		orders = append(orders, newOrder)
 	}
+	log.Println("Printing logs in client.go of orders")
+	log.Println(orders)
 	return orders, nil
 }
