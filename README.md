@@ -17,23 +17,25 @@ It demonstrates how multiple services can interact using **gRPC**, with a **Grap
 ## 🏗 Architecture
 
 ```text
-                +----------------------+
-                |       Client         |
-                +----------+-----------+
-                           |
-                           v
-                +----------+-----------+
-                |   GraphQL Gateway    |
-                |  (gRPC to Services)  |
-                +----------+-----------+
-                           |
-          +----------------+----------------+
-          |                |                |
-          v                v                v
-+---------+----+   +-------+-------+  +------+-------+
-| Account Svc  |   | Catalog Svc   |  | Order Svc    |
-| PostgreSQL   |   | Elasticsearch |  | PostgreSQL   |
-+--------------+   +---------------+  +--------------+
+                      +----------------------+
+                      |   GraphQL Gateway    |
+                      +----------+-----------+
+                                 |
+                                 v
+                +----------------+----------------+
+                |                 |               |
+                v                 v               v
+       +--------+-------+  +------+-------+  +-----+-------+
+       | Account Client |  | Product Client|  | Order Client|
+       +--------+-------+  +------+-------+  +-----+-------+
+                |                 |               |
+              gRPC               gRPC            gRPC
+                |                 |               |
+       +--------v-------+  +------v-------+  +----v--------+
+       | Account Server |  | Product Svr  |  | Order Server|
+       +--------+-------+  +------+-------+  +-----+-------+
+                |                 |               |
+        PostgreSQL          Elasticsearch    PostgreSQL
 ```
 ---
 
@@ -41,7 +43,7 @@ It demonstrates how multiple services can interact using **gRPC**, with a **Grap
 
 ### Prerequisites
 - [Docker Desktop](https://www.docker.com/products/docker-desktop) installed & running
-- [Go 1.23+](https://go.dev/dl/) (only if you plan to run locally)
+- [Go 1.23+](https://go.dev/dl/) 
 
 ---
 
