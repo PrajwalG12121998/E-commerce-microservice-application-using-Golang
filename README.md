@@ -15,14 +15,25 @@ It demonstrates how multiple services can interact using **gRPC**, with a **Grap
 ---
 
 ## 🏗 Architecture
-[ Client ]
-↓
-[ GraphQL Gateway ]
-↓ gRPC calls
-+-------------+ +-------------+ +-------------+
-| Account Svc | | Catalog Svc | | Order Svc |
-| PostgreSQL | | Elasticsearch| | PostgreSQL |
-+-------------+ +-------------+ +-------------+
+
+```text
+                +----------------------+
+                |       Client         |
+                +----------+-----------+
+                           |
+                           v
+                +----------+-----------+
+                |   GraphQL Gateway    |
+                |  (gRPC to Services)  |
+                +----------+-----------+
+                           |
+          +----------------+----------------+
+          |                |                |
+          v                v                v
++---------+----+   +-------+-------+  +------+-------+
+| Account Svc  |   | Catalog Svc   |  | Order Svc    |
+| PostgreSQL   |   | Elasticsearch |  | PostgreSQL   |
++--------------+   +---------------+  +--------------+
 
 ---
 
@@ -46,6 +57,6 @@ docker compose up -d --build
 # View logs for GraphQL gateway
 docker compose logs -f graphql
 
-
+---
 GraphQL Playground will be available at:
 ➡ http://localhost:8000/playground (or / depending on your router config)
