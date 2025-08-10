@@ -34,7 +34,7 @@ It demonstrates how multiple services can interact using **gRPC**, with a **Grap
 | Account Svc  |   | Catalog Svc   |  | Order Svc    |
 | PostgreSQL   |   | Elasticsearch |  | PostgreSQL   |
 +--------------+   +---------------+  +--------------+
-
+```
 ---
 
 ## 🚀 Getting Started
@@ -57,6 +57,6 @@ docker compose up -d --build
 # View logs for GraphQL gateway
 docker compose logs -f graphql
 
----
+```
 GraphQL Playground will be available at:
 ➡ http://localhost:8000/playground (or / depending on your router config)
